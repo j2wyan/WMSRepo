@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79E50C57-B2CA-4A45-AC98-1953382DD510}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS1._0</RootNamespace>
+    <AssemblyName>WMS1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v23, Version=2.3.2015.918, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\InputManWin8\Bin\v8.0.2015.0918\GrapeCity.Framework.InputMan.v23.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v23, Version=2.3.2015.918, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MultiRowWin8\Bin\v8.0.2015.0918\GrapeCity.Framework.MultiRow.v23.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.PlusPak.v23, Version=2.3.2015.918, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Framework.PlusPak.v23.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.PDF, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.PlusPak.VSPackage.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.PlusPak.VSPackage.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.Design.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\InputManWin8\Bin\v8.0.2015.0918\GrapeCity.Win.Editors.Design.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\InputManWin8\Bin\v8.0.2015.0918\GrapeCity.Win.Editors.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.FunctionKey.Design.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=aa208f7e417ecbb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.FunctionKey.Design.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.FunctionKey.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=aa208f7e417ecbb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.FunctionKey.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\InputManWin8\Bin\v8.0.2015.0918\GrapeCity.Win.Input.Interop.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MultiRowWin8\Bin\v8.0.2015.0918\GrapeCity.Win.MultiRow.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PlusPak.Calendar.Design.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.PlusPak.Calendar.Design.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PlusPak.Calendar.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.PlusPak.Calendar.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PlusPak.Design.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.PlusPak.Design.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PlusPak.v80, Version=8.0.2015.918, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PlusPakWin8\Bin\v8.0.2015.0918\GrapeCity.Win.PlusPak.v80.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\BLJutyu.cs" />
+    <Compile Include="BL\FunctionKeyAction.cs" />
+    <Compile Include="DL\Class1.cs" />
+    <Compile Include="DL\DABunrui.cs" />
+    <Compile Include="DL\DADenpyomeisai.cs" />
+    <Compile Include="DL\DAShoinDaicho.cs" />
+    <Compile Include="DL\DATantosha.cs" />
+    <Compile Include="DL\DATokui.cs" />
+    <Compile Include="DL\DAUriageDenpyo.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SdkCallback.cs" />
+    <Compile Include="Template\Item-DeatilListTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\Item-DeatilListTemplate.designer.cs">
+      <DependentUpon>Item-DeatilListTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempItakPri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempItakPri.designer.cs">
+      <DependentUpon>TempItakPri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempJutyuEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempJutyuEntry.designer.cs">
+      <DependentUpon>TempJutyuEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempNyukinIkkatsu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempNyukinIkkatsu.designer.cs">
+      <DependentUpon>TempNyukinIkkatsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempProductMototyo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempProductMototyo.designer.cs">
+      <DependentUpon>TempProductMototyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TemProductsPrice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TemProductsPrice.designer.cs">
+      <DependentUpon>TemProductsPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempSeisankanri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempSeisankanri.designer.cs">
+      <DependentUpon>TempSeisankanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempSokoEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempSokoEntry.designer.cs">
+      <DependentUpon>TempSokoEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempUriageEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempUriageEntry.designer.cs">
+      <DependentUpon>TempUriageEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempZaikoichiran.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempZaikoichiran.designer.cs">
+      <DependentUpon>TempZaikoichiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\TempZaikosuii.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\TempZaikosuii.designer.cs">
+      <DependentUpon>TempZaikosuii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CompanyInfo.Designer.cs">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DataSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DataSelect.Designer.cs">
+      <DependentUpon>DataSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DBSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DBSetting.Designer.cs">
+      <DependentUpon>DBSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DenpyoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DenpyoList.Designer.cs">
+      <DependentUpon>DenpyoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dsigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dsigner.Designer.cs">
+      <DependentUpon>Dsigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItakuPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItakuPrint.Designer.cs">
+      <DependentUpon>ItakuPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Item-DetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Item-DetailList.Designer.cs">
+      <DependentUpon>Item-DetailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemSelect.Designer.cs">
+      <DependentUpon>ItemSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Item_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Item_Master.Designer.cs">
+      <DependentUpon>Item_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JutyuEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JutyuEntry.Designer.cs">
+      <DependentUpon>JutyuEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Navigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NyukinIkkatsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NyukinIkkatsu.Designer.cs">
+      <DependentUpon>NyukinIkkatsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PassChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PassChange.Designer.cs">
+      <DependentUpon>PassChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrintJutyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PrintJutyu.Designer.cs">
+      <DependentUpon>PrintJutyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductList.Designer.cs">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductMototyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductMototyo.Designer.cs">
+      <DependentUpon>ProductMototyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductsPriceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductsPriceEntry.Designer.cs">
+      <DependentUpon>ProductsPriceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeisanHatyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SeisanHatyu.Designer.cs">
+      <DependentUpon>SeisanHatyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeisanKanri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SeisanKanri.Designer.cs">
+      <DependentUpon>SeisanKanri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeisanShohin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SeisanShohin.Designer.cs">
+      <DependentUpon>SeisanShohin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShohinSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShohinSearch.Designer.cs">
+      <DependentUpon>ShohinSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SokoEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SokoEntry.Designer.cs">
+      <DependentUpon>SokoEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TankaRireki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TankaRireki.Designer.cs">
+      <DependentUpon>TankaRireki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TantoshaSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TantoshaSearch.Designer.cs">
+      <DependentUpon>TantoshaSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TokuiSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TokuiSearch.Designer.cs">
+      <DependentUpon>TokuiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UriageEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UriageEntry.Designer.cs">
+      <DependentUpon>UriageEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Zaikoichiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Zaikoichiran.Designer.cs">
+      <DependentUpon>Zaikoichiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Zaikosuii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Zaikosuii.Designer.cs">
+      <DependentUpon>Zaikosuii.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Template\Item-DeatilListTemplate.resx">
+      <DependentUpon>Item-DeatilListTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempItakPri.resx">
+      <DependentUpon>TempItakPri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempJutyuEntry.resx">
+      <DependentUpon>TempJutyuEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempNyukinIkkatsu.resx">
+      <DependentUpon>TempNyukinIkkatsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempProductMototyo.resx">
+      <DependentUpon>TempProductMototyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TemProductsPrice.resx">
+      <DependentUpon>TemProductsPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempSeisankanri.resx">
+      <DependentUpon>TempSeisankanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempSokoEntry.resx">
+      <DependentUpon>TempSokoEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempUriageEntry.resx">
+      <DependentUpon>TempUriageEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempZaikoichiran.resx">
+      <DependentUpon>TempZaikoichiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\TempZaikosuii.resx">
+      <DependentUpon>TempZaikosuii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CompanyInfo.resx">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DataSelect.resx">
+      <DependentUpon>DataSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DBSetting.resx">
+      <DependentUpon>DBSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DenpyoList.resx">
+      <DependentUpon>DenpyoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dsigner.resx">
+      <DependentUpon>Dsigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItakuPrint.resx">
+      <DependentUpon>ItakuPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Item-DetailList.resx">
+      <DependentUpon>Item-DetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemSelect.resx">
+      <DependentUpon>ItemSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Item_Master.resx">
+      <DependentUpon>Item_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JutyuEntry.resx">
+      <DependentUpon>JutyuEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NyukinIkkatsu.resx">
+      <DependentUpon>NyukinIkkatsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PassChange.resx">
+      <DependentUpon>PassChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PrintJutyu.resx">
+      <DependentUpon>PrintJutyu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductList.resx">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductMototyo.resx">
+      <DependentUpon>ProductMototyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductsPriceEntry.resx">
+      <DependentUpon>ProductsPriceEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeisanHatyu.resx">
+      <DependentUpon>SeisanHatyu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeisanKanri.resx">
+      <DependentUpon>SeisanKanri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeisanShohin.resx">
+      <DependentUpon>SeisanShohin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShohinSearch.resx">
+      <DependentUpon>ShohinSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SokoEntry.resx">
+      <DependentUpon>SokoEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TankaRireki.resx">
+      <DependentUpon>TankaRireki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TantoshaSearch.resx">
+      <DependentUpon>TantoshaSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TokuiSearch.resx">
+      <DependentUpon>TokuiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UriageEntry.resx">
+      <DependentUpon>UriageEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Zaikoichiran.resx">
+      <DependentUpon>Zaikoichiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Zaikosuii.resx">
+      <DependentUpon>Zaikosuii.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Report\PageReport.rdlx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="HBBUNLib">
+      <Guid>{8854F726-AA2D-4DE8-A97E-243E9026172B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="HBKBANKLib">
+      <Guid>{1F7BA349-D3BC-42D0-AEF3-195522D9E5C1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="HBODDSLib">
+      <Guid>{4D3152F7-A625-40F1-BD7A-DBFBAE44BF28}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="HBTOKLib">
+      <Guid>{9ABECF89-A087-4393-8BCC-7E353E87A7A3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AddNodefromFile_354.png" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\good.png" />
+    <Content Include="Resources\logo.gif" />
+    <Content Include="Resources\PrintPreviewDialogControl_699_24.bmp" />
+    <Content Include="Resources\Print_11009.png" />
+    <Content Include="Resources\Save_6530.png" />
+    <Content Include="Resources\ser2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
