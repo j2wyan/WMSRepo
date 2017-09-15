@@ -47,6 +47,8 @@
             GrapeCity.Win.Editors.Fields.DateLiteralField dateLiteralField4 = new GrapeCity.Win.Editors.Fields.DateLiteralField();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UriageEntry));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gcMultiRow1 = new GrapeCity.Win.MultiRow.GcMultiRow();
+            this.tempUriageEntry2 = new WMS_V1.TempUriageEntry();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -130,12 +132,10 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.gcMultiRow1 = new GrapeCity.Win.MultiRow.GcMultiRow();
-            this.tempUriageEntry2 = new WMS_V1.TempUriageEntry();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcMultiRow1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDate1)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcMultiRow1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -209,6 +209,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(938, 728);
             this.panel1.TabIndex = 0;
+            // 
+            // gcMultiRow1
+            // 
+            this.gcMultiRow1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gcMultiRow1.BackColor = System.Drawing.Color.White;
+            this.gcMultiRow1.Location = new System.Drawing.Point(16, 239);
+            this.gcMultiRow1.Name = "gcMultiRow1";
+            this.gcMultiRow1.Size = new System.Drawing.Size(904, 427);
+            this.gcMultiRow1.TabIndex = 58;
+            this.gcMultiRow1.Template = this.tempUriageEntry2;
+            this.gcMultiRow1.Text = "gcMultiRow1";
             // 
             // label19
             // 
@@ -1105,23 +1117,12 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(97, 46);
             this.toolStripButton7.Text = "登録（F12）";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 49);
-            // 
-            // gcMultiRow1
-            // 
-            this.gcMultiRow1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.gcMultiRow1.BackColor = System.Drawing.Color.White;
-            this.gcMultiRow1.Location = new System.Drawing.Point(16, 239);
-            this.gcMultiRow1.Name = "gcMultiRow1";
-            this.gcMultiRow1.Size = new System.Drawing.Size(904, 427);
-            this.gcMultiRow1.TabIndex = 58;
-            this.gcMultiRow1.Template = this.tempUriageEntry2;
-            this.gcMultiRow1.Text = "gcMultiRow1";
             // 
             // UriageEntry
             // 
@@ -1139,10 +1140,10 @@
             this.Load += new System.EventHandler(this.UriageEntry_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcMultiRow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDate1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcMultiRow1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
